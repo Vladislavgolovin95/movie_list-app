@@ -6,15 +6,6 @@ const moviesList = document.querySelector('#moviesList');
 
 const movies = [];
 
-addMovieBtn.addEventListener('click', function() {
-    const movieFromUser = getFromMovie();
-    addMovie(movieFromUser);
-    renderMovies();
-    clearInput();
-});
-
-
-
 // Получаем данные с поля ввода пользователя
 function getFromMovie() {
     const nameMovie = inputMovieNode.value;
@@ -58,7 +49,7 @@ function renderMovies() {
                 type="checkbox" 
             >
             <span class="custom-checkbox"></span>
-            <span id='nameMovie'>${movies[i]}</span>
+            <span id='nameMovie' class='nameMovie'>${movies[i]}</span>
             <button id="${i}" class="btnCloseCheckbox"></button>
         </label>
         `
@@ -74,6 +65,15 @@ function renderMovies() {
         });
     });
 };
+
+// Обработчики событий
+
+addMovieBtn.addEventListener('click', function() {
+    const movieFromUser = getFromMovie();
+    addMovie(movieFromUser);
+    renderMovies();
+    clearInput();
+});
 
 moviesList.addEventListener('click', (event) => {
     if (event.target.classList.contains('btnCloseCheckbox')) {
