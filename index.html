@@ -20,8 +20,16 @@
             <h1>Посмотреть</h1>
         </div>
         <div class="movies">
-            <input id="inputMovie" class="inputMovie" type="text" placeholder="Добавить фильм" required>
-            <button id="addBtn" class="addBtn"> ⇨ </button>
+            <input 
+                id="inputMovie" 
+                class="inputMovie" 
+                type="text" 
+                placeholder="Добавить фильм" 
+                required pattern="[a-zA-Z]"
+            >
+            <button id="addBtn" class="addBtn"> 
+                <img src="right.png"> 
+            </button>
             <div id="moviesList" class="moviesList"></div>
         </div>
     </div>
