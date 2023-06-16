@@ -43,6 +43,7 @@ function renderMovies() {
     for (let i = 0; i < movies.length; i++) {
         moviesHTML += `
         <label id="${i}" class="checkbox">
+        <div class="checkbox-wrapper">
             <input 
                 id="movieCheckbox-${i}"
                 class="real-checkbox"
@@ -50,6 +51,7 @@ function renderMovies() {
             >
             <span class="custom-checkbox"></span>
             <span id='nameMovie' class='nameMovie'>${movies[i]}</span>
+            </div>
             <button id="${i}" class="btnCloseCheckbox"></button>
         </label>
         `

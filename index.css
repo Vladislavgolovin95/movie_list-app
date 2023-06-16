@@ -91,18 +91,30 @@ h1 {
 
 /* Стили чекбокса */
 
+.checkbox-wrapper {
+    display: flex;
+    align-items: center;
+}
 .checkbox {
+    box-sizing: border-box;
     margin-bottom: 3px;
+    padding: 20px;
     max-width: 790px;
+    min-height: 70px;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    position: relative;
-    overflow-wrap: anywhere;
-    height: auto;
-    padding: 24px;
+    overflow-wrap: break-word;
     background: #3A3939;
     border-radius: 10px;
+}
+
+.nameMovie {
+    margin-top: 5px;
+    margin-bottom: 5px;
+    margin-right: 25px;
+    max-width: 600px;
+    overflow-wrap: break-word;
 }
 
 .real-checkbox {
@@ -117,8 +129,8 @@ h1 {
     position: relative;
     display: inline-block;
     margin-right: 20px; 
-    width: 19px;
-    height: 19px;
+    min-width: 19px;
+    min-height: 19px;
     vertical-align: sub;
     opacity: 0.3;
     border: 1px solid #F3F6F9;
@@ -154,8 +166,8 @@ h1 {
 
 .btnCloseCheckbox {
     float: right;
-    width: 23px;
-    height: 23px;
+    min-width: 23px;
+    min-height: 23px;
     border: none;
     outline: none;
     background-color: inherit;
@@ -188,7 +200,6 @@ h1 {
     }
     .moviesList {
         max-height: 500px;
-        overflow-y: auto;
     }
     .inputMovie {
         margin-bottom: 40px;
@@ -202,18 +213,14 @@ h1 {
         height: 45px;
     }
     .checkbox {
-        overflow-wrap: anywhere;
         max-width: 790px;
         padding: 24px;
     }
     .nameMovie {
         margin-top: 5px;
         margin-bottom: 5px;
-        position: absolute;
         margin-right: 25px;
-        left: 55px;
-        right: 25px;
-        overflow-wrap: anywhere;
-        word-wrap: break-word;
+        max-width: 250px;
+        overflow-wrap: break-word;
     }
 }
